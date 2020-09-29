@@ -1,0 +1,17 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 950px;
+    margin: 0 auto;
+    background: #eee;
+}
+
