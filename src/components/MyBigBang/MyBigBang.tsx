@@ -1,37 +1,32 @@
 import * as React from 'react'
 
 import "./MyBigBang.css"
+import {Direction} from './BigBangUIDirection'
 
-export interface MyButtonProps {
-    isEnable: boolean,
-    varient: string,
-    title: string,
-    color: string,
-    onClick: ()=>void
+export interface BigBangUI {
+   height?:string | number,
+   width?:string | number,
+   visiable?:boolean,
+   direction?:Direction
 }
 
 
+class BigBangUIComponent<T> extends React.Component<BigBangUIProps<T>, BigBangUIState> {
+    static defultProps : BigBangUIProps ={
+        width:'auto',
+        height:'auto',
+        visiable:true,
+        direction:Direction.ltr
+    }
+    constructor(props: BigBangUIProps<T>) {
+        super(props);
 
-export  const MyButton: React.FC<MyButtonProps> =({ 
-    isEnable = false,
-     varient = "primary", 
-     title = "MyButton" ,
-     color,
-     onClick=()=>{
-         alert(1)
-     },
-     ...props
-    }) => {
-        const mode = isEnable ? 'enable' : 'disable';
-        return(
-        <button  
-        className={`my-button ${varient} ${mode}`} 
-        onClick= {onClick}
-        style={{color}}
-       > 
-            {title}
-        </button>
-        );
-    };
+    render() {
+        return <p> The result is </p>
+    }
+}
+}
+
+
 
 
