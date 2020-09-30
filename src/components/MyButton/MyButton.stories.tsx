@@ -22,12 +22,12 @@ Primary.args = {
     title: 'primary Btn',
   };
 
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//     isEnable:false,
-//     varient: 'secondary',
-//     title: 'Secondary Btn',
-//   };
+export const Secondary = Template.bind({});
+Secondary.args = {
+    isEnable:false,
+    varient: 'secondary',
+    title: 'Secondary Btn',
+  };
 
 export const Success = Template.bind({});
 Success.args = {
@@ -36,9 +36,9 @@ Success.args = {
     title: 'success Btn',
   };
 
-// export const Danger = Template.bind({});
-// Danger.args = {
-//     isEnable: false,
-//     varient: 'danger',
-//     title: 'danger Btn',
-//   };
+export const Danger = Template.bind({});
+Danger.args = {
+    isEnable: false,
+    varient: 'danger',
+    title: 'danger Btn',
+  };

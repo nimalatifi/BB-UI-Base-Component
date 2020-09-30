@@ -8,8 +8,7 @@
     "build": "webpack --mode production --config webpack.prod.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest",
-    "chromatic": "chromatic"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +36,6 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.1.0",
-    "dotenv-webpack": "^2.0.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.4.2",
     "react-is": "^16.13.1",

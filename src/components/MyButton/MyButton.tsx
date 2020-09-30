@@ -27,7 +27,7 @@ export  const MyButton: React.FC<MyButtonProps> =({
         <button  
         className={`my-button ${varient} ${mode}`} 
         onClick= {onClick}
-        
+        style={{color}}
        > 
             {title}
         </button>
