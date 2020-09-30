@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import {MyButton, MyButtonProps}  from './MyButton';
+import {MyButton, MyButtonProps}  from './MyBigBang';
 
 
 export default {
-  title: 'Components/MyButton',
+  title: 'Components/MyBigBang',
   component: MyButton,
   // argTypes:{
   //     color:{ control:'color'}

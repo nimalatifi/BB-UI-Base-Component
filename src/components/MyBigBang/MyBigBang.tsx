@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import "./MyButton.css"
+import "./MyBigBang.css"
 
 export interface MyButtonProps {
     isEnable: boolean,
