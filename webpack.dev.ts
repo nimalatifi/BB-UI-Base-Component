@@ -1,5 +1,6 @@
 import * as webpack from "webpack";
-import * as HtmlWebPackPlugin from "html-webpack-plugin";
+import  HtmlWebPackPlugin from "html-webpack-plugin";
+const Dotenv = require('dotenv-webpack');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html"
@@ -36,10 +37,10 @@ const config: webpack.Configuration = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
-      }
+      },
     ]
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin,  new Dotenv()],
   devtool: 'source-map'
 };
 
