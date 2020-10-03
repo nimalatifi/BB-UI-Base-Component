@@ -1,17 +1,12 @@
 import * as React from 'react'
 
 import "./MyBigBang.css"
-import {Direction} from './BigBangUIDirection'
-
-export interface BigBangUIProps {
-   height?:string | number,
-   width?:string | number,
-   visiable?:boolean,
-   direction?:Direction
-}
+import {Direction} from '../../BigBang/Direction'
 
 
-class BigBangUIComponent<T> extends React.Component<BigBangUIProps<T>, BigBangUIState> {
+
+
+class BigBangUIComponent<T> extends React.Component<BigBangUIProps> {
     static defultProps : BigBangUIProps = {
         width:'auto',
         height:'auto',
