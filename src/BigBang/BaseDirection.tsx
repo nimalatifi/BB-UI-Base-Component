@@ -1,4 +1,4 @@
-export enum Direction {
+export enum BaseDirection {
     ltr="ltr",
     rtl="rtl"
 }
