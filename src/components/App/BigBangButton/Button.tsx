@@ -58,6 +58,7 @@ export class BigBangButton extends BaseComponent<ButtonProps,ButtonState> {
         }
     }
     render() {
+
         return  <p >{this.getInstance} ButtonProps Test mmt </p>
     }
 }
