@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import "./BaseStyles"
+import "./BaseStyle"
 import {BaseDirection} from './BaseDirection'
 import {BaseProps} from './BaseProps'
 

@@ -22,7 +22,7 @@ const config: webpack.Configuration = {
 
       //sass loader
       {
-        test: /\.s(a|c)ss$/i,
+        test: /\.css$/i,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',

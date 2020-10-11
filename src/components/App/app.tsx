@@ -1,15 +1,12 @@
 import * as React from "react";
-import './app.scss';
+import {useState} from "react";
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import DatePicker from "react-modern-calendar-datepicker";
 
+const App = () => {
+  const [selectedDay, setValue] = useState(null);
+  
+  return <DatePicker value={selectedDay} onChange={setValue} shouldHighlightWeekends />;
+};
 
-
-class App extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-      
-      </React.Fragment>
-    )
-  }
-}
-export default App
+export default App;
