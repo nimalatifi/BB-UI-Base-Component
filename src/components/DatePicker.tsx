@@ -37,7 +37,7 @@ export class  Mydatepicker extends React.Component<IDatepickerProps,IDatePickerS
     }
     render(){
     return(<div>
-       <OriginalDatePicker locale={this.state.locale}/>
+       <OriginalDatePicker title="kk"/>
         {this.state.locale}
         </div>)
     }
