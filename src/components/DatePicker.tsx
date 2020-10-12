@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import OriginalDatePicker from './OriginalDatePicker'
 export interface IDatepickerProps{
     title: string,
 }
@@ -18,6 +18,7 @@ export class  Mydatepicker extends React.Component<IDatepickerProps,IDatePickerS
         super(props);
         this.state={locale:'fa'}
     }
+    
     getInstance():IDatePickerInstance{
         let self= this;
         return{
@@ -36,7 +37,7 @@ export class  Mydatepicker extends React.Component<IDatepickerProps,IDatePickerS
     }
     render(){
     return(<div>
-        <h1>name: {this.props.title}</h1>
+       <OriginalDatePicker locale={this.state.locale}/>
         {this.state.locale}
         </div>)
     }
