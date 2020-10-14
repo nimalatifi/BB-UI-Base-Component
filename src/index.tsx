@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 // import {useState} from "react";
 // import "react-modern-calendar-datepicker/lib/DatePicker.css";
 // import DatePicker from "react-modern-calendar-datepicker";
-import DatepickerWrappper from "./datePicker-wrapper";
+import DatepickerWrappper from "./components/BigBangUiDatePicker/DatePicker-Wrapper";
 
 // const Index = () => {
 //   return <App />;
@@ -19,7 +19,7 @@ import DatepickerWrappper from "./datePicker-wrapper";
 // };
 
 
-(window as any).mydp= DatepickerWrappper.create({title:"Nima",colorPrimary:'blue'})
+(window as any).mydp= DatepickerWrappper.create({title:"Nima",colorPrimary:'blue',shouldHighlightWeekends:true, value:null})
 document.getElementById("root").append((window as any).mydp.element);
 
 
