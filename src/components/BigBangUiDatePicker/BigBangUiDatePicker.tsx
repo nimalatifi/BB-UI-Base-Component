@@ -1,20 +1,20 @@
 import * as React from 'react'
 import {useState} from "react";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
-import DatePicker, {DayRange ,DayValue, Day, DatePickerProps , CalendarProps, Value} from 'react-modern-calendar-datepicker'
+import DatePicker, {DayRange ,DayValue, Day, DatePickerProps , CalendarProps, Locale} from 'react-modern-calendar-datepicker'
 
-export  interface  IBigBangUiDatePickerProps extends CalendarProps<null>{
+type ValueType= DayValue | Day[] | DayRange;
+export  interface  IBigBangUiDatePickerProps extends DatePickerProps<ValueType|any>{
     title?: string
 }
 
 export interface  BigBangUiDatePickerState  {
-    day: DayValue,
-    setDay: DayValue,
-    locale:string
+    value: DayValue,
+    locale: string| Locale
 
 }
 export interface IBigBangUiDatePickerDatePickerInstance{
-    locale:string,
+    locale: string | Locale,
     value:DayValue,
 }
 
@@ -22,9 +22,8 @@ export  class BigBangUiDatePicker extends React.Component<IBigBangUiDatePickerPr
     constructor(props:IBigBangUiDatePickerProps){
         super(props);
         this.state={
-            setDay:null,
-            day:null,
-            locale:"fa"
+            value: this.props.value,
+            locale: this.props.locale
         }
     }
 
@@ -32,15 +31,15 @@ export  class BigBangUiDatePicker extends React.Component<IBigBangUiDatePickerPr
         let self= this;
         return{
             get value(){
-                return self.state.day
+                return self.state.value
             },
             set value(val:DayValue){
                 self.setState({
-                    day:val
+                    value:val
                 })
             },
             get locale(){
-                return self.state.locale
+                return self.state.locale as any
             },
             set locale(value:string) {
                 self.setState({
@@ -52,17 +51,19 @@ export  class BigBangUiDatePicker extends React.Component<IBigBangUiDatePickerPr
     
     onChange=(value:DayValue)=>{
         console.log(value);
-        this.setState({day:value})
+        this.setState({value:value})
     }
 
     
     render() {
-     
+      console.log(this.props)
         return (
             <DatePicker 
+            {...this.props}
              locale={this.state.locale}
              onChange={this.onChange}
-             {...this.props}
+             value={this.state.value}
+              
              />
         )
         

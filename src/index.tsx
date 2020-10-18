@@ -19,7 +19,7 @@ import DatepickerWrappper from "./components/BigBangUiDatePicker/DatePicker-Wrap
 // };
 
 
-(window as any).mydp= DatepickerWrappper.create({title:"Nima",colorPrimary:'blue',shouldHighlightWeekends:true, value:null})
+(window as any).mydp= DatepickerWrappper.create({title:"Nima",colorPrimary:'blue',shouldHighlightWeekends:true, locale:'fa',value:{day: 2, month: 8, year: 1393}})
 document.getElementById("root").append((window as any).mydp.element);
 
 
